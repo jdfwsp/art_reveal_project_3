@@ -1,4 +1,3 @@
-from stats import statMap      
 opening = '''<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 
 <svg
@@ -133,48 +132,8 @@ hats = {
     'x': ''
 }
 
-def getImage(code):
-    image = {}
-    image.update(body = code[0])
-    image.update(head = code[1])
-    image.update(hat = code[2])
-    
-    return image
 
-def getImage2(code):
-    image = {}
-    image.update(body = bodies[code[0]])
-    image.update(head = heads[code[1]])
-    image.update(hat = hats[code[2]])
-    f = open(f'SVGs/{code}.svg', 'w')
-    f.write(opening)
-    for k in image:
-        f.write(image[k])
-    
-    f.write(closing)
-    f.close()
+
     
     
-class Stats:
-    
-    def __init__(self, code):
-        self.attack = statMap[code[0]]
-        self.defend = statMap[code[1]]
-        self.vitality = statMap[code[2]]
-        
-class Image:
-    
-    def __init__(self, code):
-        
-        self.body = getImage(code)['body']
-        self.head = getImage(code)['head']
-        self.hat = getImage(code)['hat']
-        
-class Eagle:
-    
-    def __init__(self, code):
-        self.code = code
-        self.stats = Stats(code)
-        self.image = Image(code)
-        
         
