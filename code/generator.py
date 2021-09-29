@@ -17,7 +17,7 @@ logging.basicConfig(
 
 def writeImage(code):
     code = str.lower(code)
-    name = f'SVGs/Output/{code}.svg'
+    name = f'Output/SVGs/{code}.svg'
     
     
     if path.exists(name):
@@ -39,7 +39,7 @@ def writeImage(code):
         
 #         cairosvg.svg2png(
 #         url=name,
-#         write_to=f'SVGs/Output/PNGs/{code}.png')
+#         write_to=f'Output/PNGs/{code}.png')
             
         success = f'---->\t🦅 {code} generated on {datetime.now()} ✅'
         logging.info(success)
