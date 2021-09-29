@@ -1,11 +1,12 @@
-import os.path
-from os import path
-import itertools
-import logging
+import cairosvg
 import datetime
 from datetime import datetime
 import eagleXML
 from eagleXML import opening, closing, backgrounds, bodies, options
+import itertools
+import logging
+import os.path
+from os import path
 
 logging.basicConfig(
     filename = 'generated.log',
@@ -20,8 +21,9 @@ def writeImage(code):
     
     
     if path.exists(name):
-        logging.error(f'---->\t\t🚨 Someone tried to generate {code} again on {datetime.now()} 🚨')
-        print('error')
+        err = f'🚨 Someone tried to generate {code} again on {datetime.now()} 🚨'
+        logging.error(f'---->\t{err}')
+        print(err)
     
     else:
         image = {}
@@ -34,9 +36,14 @@ def writeImage(code):
             f.write(image[k])
         f.write(closing)
         f.close()
-
-        logging.info(f'---->\t\t🦅 {code} generated on {datetime.now()} ✅')
-        print('success')
+        
+        cairosvg.svg2png(
+        url=name,
+        write_to=f'SVGs/Output/PNGs/{code}.png')
+            
+        success = f'🦅 {code} generated on {datetime.now()} ✅'
+        logging.info(f'---->\t\t{success}')
+        print(success)
         
 def generateSet(options, length):
     res = [''.join(item) for item in itertools.product(options, repeat=length)]
@@ -44,6 +51,19 @@ def generateSet(options, length):
     items = []
 
     for r in res:
-        if r[1] != 'x':
+        if r[1] != 'x' and r[0] != 'x':
             items.append(r)
+    return items
+
+import random
+
+def generateRandomSet(options, length):
+    res = [''.join(item) for item in itertools.product(options, repeat=length)]
+
+    items = []
+
+    for r in res:
+        if r[1] != 'x' and r[0] != 'x':
+            items.append(r)
+    random.shuffle(items)
     return items
