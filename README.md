@@ -31,7 +31,9 @@ Traditional works of art such as paintings are valuable precisely because they a
 
 
 
-The images for this collection of NFTs is generated with `python3` in the command line. First the layers are drawn in an SVG editor like Inkscape, then the xml is parsed and sent to a python module as dictionaries that the `generator` function calls to write the final SVG. The generator is activated in the python3 interpreter as demonstrated below.
+The images for this collection of NFTs are generated with `python3` in the command line. First, the layers are drawn in an `SVG` editor like `Inkscape`, then the `xml` is parsed and sent to a `python module` as dictionaries that the `generator` function calls to write the final `SVG`. The `generator` is activated in the `python3` interpreter as demonstrated below.
+
+If you want to generate PNGs, uncomment lines 40-42 in this [`python`](code/generator.py) file.
 
 ```
 [📂 ~/art_reveal_project_3]
@@ -103,17 +105,19 @@ Select the file you wish to upload.
 
 ![](images/svg_sucess.png)
 
-The CID is currently in version 0 which is case-sensitive and gives some browsers issues, convert it to CID version 1 to avoid this with the `ipfs` command line tool:
-```[📂 ~/art_reveal_project_3/code]
+The `CID` is currently in version 0 which is case-sensitive and gives some browsers issues, convert it to `CID version 1` to avoid this with the `ipfs` command line tool:
+
+```
+[📂 ~/art_reveal_project_3/code]
  🦅 ipfs cid format -v 1 -b base32 QmUTbvCRLEzrp9JXH8Uj1E2eHajckXZ2icni9au4TrmE6N
 bafybeic25yd6iirhrydazth7lqz26wnbwynz4zoirnnhpjtdyvguz7z67m
 ```
 
-Upload your new CID giving it a new name.
+Upload your new `CID` giving it a new name.
 
 ![](images/cid1_success.png)
 
-Create a json file that contains metadata complying with the ERC-721 standard, using your new CID as the image address.  Upload this file to IPFS with Pinata.
+Create a `json` file that contains metadata complying with the `ERC-721` standard, using your new `CID` as the image address.  Upload this file to `IPFS` with `Pinata`.
 
 ![](images/json_uploaded.png)
 
