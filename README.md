@@ -12,6 +12,9 @@ NFTs are "one-of-a-kind" assets in the digital world that can be bought and sold
 Traditional works of art such as paintings are valuable precisely because they are one of a kind. But digital files can be easily and endlessly duplicated. With NFTs, artwork can be "tokenised" to create a digital certificate of ownership that can be bought and sold.
 
 ## Getting Started (Project Overview)
+Intro: Overall Objective and Intention of the Project
+(https://www.pudgypenguins.io/#/)
+
 1. Artwork 
     * Generate NFT (.py) and create .png 
 2. Upload Artwork
