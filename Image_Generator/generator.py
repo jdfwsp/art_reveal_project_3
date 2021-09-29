@@ -21,9 +21,9 @@ def writeImage(code):
     
     
     if path.exists(name):
-        err = f'🚨 Someone tried to generate {code} again on {datetime.now()} 🚨'
-        logging.error(f'---->\t{err}')
-        print(err)
+        err = f'---->\t🚨 Someone tried to generate {code} again on {datetime.now()} 🚨'
+        logging.error(err)
+        print(f'🚨 {code} already exists 🚨')
     
     else:
         image = {}
@@ -41,9 +41,9 @@ def writeImage(code):
         url=name,
         write_to=f'SVGs/Output/PNGs/{code}.png')
             
-        success = f'🦅 {code} generated on {datetime.now()} ✅'
-        logging.info(f'---->\t\t{success}')
-        print(success)
+        success = f'---->\t🦅 {code} generated on {datetime.now()} ✅'
+        logging.info(success)
+        print(f'🦅 {code} successfully generated ✅')
         
 def generateSet(options, length):
     res = [''.join(item) for item in itertools.product(options, repeat=length)]
