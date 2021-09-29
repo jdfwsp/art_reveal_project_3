@@ -88,6 +88,20 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 ### 2. Upload Artwork
 Need Josh's input here or see how this was completed? Was mint command used? 
+![](images/upload.png)
+
+![](images/options.png)
+
+![](images/svg_sucess.png)
+```[📂 ~/art_reveal_project_3/code]
+ 🦅 ipfs cid format -v 1 -b base32 QmUTbvCRLEzrp9JXH8Uj1E2eHajckXZ2icni9au4TrmE6N
+bafybeic25yd6iirhrydazth7lqz26wnbwynz4zoirnnhpjtdyvguz7z67m
+```
+![](images/cid1_success.png)
+
+![](images/json_uploaded.png)
+
+![](images/json.png)
 
 ### 3. Create Smart Contract for NFT Deployment
 * ProudPatriotNFT.sol imports ERC721 for the purposes of demonstrating integration with the OpenSea marketplace. We also include a script for minting the NFT items
