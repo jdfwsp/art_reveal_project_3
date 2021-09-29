@@ -31,8 +31,8 @@ Traditional works of art such as paintings are valuable precisely because they a
 Below is an example of command line usage:
 ```
 [📂 ~/art_reveal_project_3]
- 🦅 cd Image_Generator/
-[📂 ~/art_reveal_project_3/Image_Generator]
+ 🦅 cd code/
+[📂 ~/art_reveal_project_3/code]
  🦅 python3
 Python 3.9.5 (default, May 11 2021, 08:20:37) 
 [GCC 10.3.0] on linux
