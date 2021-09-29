@@ -141,7 +141,7 @@ Now your image and the accompanying metadata are hosted on a decentralized platf
 * Go https://testnets.opensea.io/ and check under your profile to confirm NFT was sucessfully deployed!
 
 ### 5. Create Smart Contract to Split Sales Proceeds from NFT's
-Once a sale is completed and the money is deposited into the OpenSea account it is then sent to our smartconctract address. Here it will be equaly divided and sent to each of the group memeber wallets. 
+Once a sale is completed and the money is deposited into the OpenSea account it is then sent to our smart contract address. Here it will be equaly divided and sent to each of the group memeber wallets. 
 
 ### 6. Deploy to NFT to Mainnet
 After running your project on a testnet for some time without issues, you will want to deploy it to the main Ethereum network (aka mainnet). Make sure your wallet has at least a few dollars worth of ETH in it.
