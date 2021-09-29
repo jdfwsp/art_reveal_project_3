@@ -23,7 +23,7 @@ Traditional works of art such as paintings are valuable precisely because they a
 4. Deploy to Rinkby Testnet and OpenSea
 5. Create Smart Contract to Split Sales Proceeds from NFT's
     * ProfitSplitter.sol
-6. Deploy NFT to Mainnet
+6. Deploy NFT to OpenSea
 
 
 ### 1. Artwork
