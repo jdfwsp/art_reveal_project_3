@@ -37,9 +37,9 @@ def writeImage(code):
         f.write(closing)
         f.close()
         
-#         cairosvg.svg2png(
-#         url=name,
-#         write_to=f'Output/PNGs/{code}.png')
+        cairosvg.svg2png(
+        url=name,
+        write_to=f'Output/PNGs/{code}.png')
             
         success = f'---->\t🦅 {code} generated on {datetime.now()} ✅'
         logging.info(success)
