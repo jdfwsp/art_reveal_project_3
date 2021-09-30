@@ -1,6 +1,6 @@
 # SVGs
 SVG_Generator/SVGs/
-
+code/eagleXML.py
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
